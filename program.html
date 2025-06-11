@@ -1,0 +1,214 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>SMP 1 PIRIME/program</title>
+
+  <!-- bootstrap -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+  <!-- Font Awesome -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
+  <!-- Bootstrap Icons -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
+
+  <!-- my css -->
+  <link rel="stylesheet" href="css/style.css">
+
+  <style>
+    .card {
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .card:hover {
+      transform: scale(1.05);
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    }
+
+    .sosmed {
+      text-align: center;
+      margin-top: 20px;
+    }
+
+    .sosmed a {
+      margin: 0 10px;
+      font-size: 24px;
+      color: rgb(170, 166, 166);
+      transition: transform 0.3s ease, color 0.3s ease;
+      animation: floating 3s ease-in-out infinite;
+    }
+
+    .sosmed :hover {
+      transform: scale(1.2);
+      color: #07197e;
+    }
+  </style>
+</head>
+
+<body>
+  <!-- Awal navigasi Bar -->
+  <nav class="navbar navbar-expand-lg bg-light shadow  fixed-top">
+    <div class="container">
+      <img src="images/logo/logo.jpg" alt="Logo" width="50" height="50" class="d-inline-block align-text-top">
+      <a class="navbar-brand fw-bold fs-4 p-2" href="#">SMP NEGERI 1 PIRIME</a>
+
+      <!-- Tombol Hamburger -->
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto p-2">
+          <li class="nav-item"><a class="nav-link active" href="index.html">Berada</a></li>
+          <li class="nav-item"><a class="nav-link" href="tetang-kami.html">Tetang Kami</a></li>
+          <li class="nav-item"><a class="nav-link" href="program.html">Program & Kurikulum</a></li>
+          <li class="nav-item"><a class="nav-link" href="galeri.html">Galeri</a></li>
+          <li class="nav-item"><a class="nav-link" href="kontak.html">Kontak</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Akhir navigasi Bar -->
+
+  <!-- Tambahkan Modal Bootstrap -->
+  <div class="modal fade" id="infoModal" tabindex="-1" aria-labelledby="modal-dialog" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="infoModalLabel">Informasi Lengkap</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <p id="modalContent">Konten akan diperbarui sesuai pilihan.</p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Tutup</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <section id="menu" class="container pt-5 bg-white">
+    <div class="p-4 text-center">
+      <h2 class="display-4 fw-semibold p-5">Program <span class="text-primary">Dan Kurikulum</span></h2>
+    </div>
+    <h2 class="p-4 fw-semibold">Mata Pelajaran Unggulan</h2>
+    <hr>
+    <div class="row row-cols-1 row-cols-md-3 g-4">
+      <!-- Card 1 -->
+      <div class="col">
+        <div class="card shadow-sm h-100">
+          <img src="images/mata pelajaran ugul/ipas.png" class="card-img-top" alt="Mata Pelajaran">
+          <div class="card-body text-center d-flex flex-column">
+            <h5 class="card-title">IPAS</h5>
+            <p class="card-text flex-grow-1">Program pembelajaran unggulan untuk meningkatkan kualitas akademik siswa.
+            <p>
+              <button class="btn btn-primary mx-auto" data-bs-toggle="modal" data-bs-target="#infoModal"
+                onclick="updateModal('IPAS', 'IPAS (Ilmu Pengetahuan Alam dan Sosial) adalah mata pelajaran yang mengintegrasikan konsep-konsep dasar dari Ilmu Pengetahuan Alam (IPA) dan Ilmu Pengetahuan Sosial (IPS). Mata pelajaran ini dirancang untuk memberikan pemahaman menyeluruh tentang hubungan antara manusia, lingkungan, dan alam sekitar.')">Selengkapnya</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 2 -->
+      <div class="col">
+        <div class="card shadow-sm h-100">
+          <img src="images/mata pelajaran ugul/Matematika.jpg" class="card-img-top" alt="Ekstrakurikuler">
+          <div class="card-body text-center d-flex flex-column">
+            <h5 class="card-title">Matematika</h5>
+            <p class="card-text flex-grow-1">Kegiatan tambahan yang mendukung bakat dan minat siswa dalam berbagai
+              bidang.</p>
+            <button class="btn btn-primary mx-auto" data-bs-toggle="modal" data-bs-target="#infoModal"
+              onclick="updateModal('Matematika', 'Matematika adalah ilmu yang mempelajari struktur, pola, hubungan, dan perubahan melalui konsep angka, ruang, dan logika. Mata pelajaran ini bertujuan untuk mengembangkan kemampuan berpikir logis, analitis, kritis, dan kreatif, yang sangat berguna dalam kehidupan sehari-hari dan berbagai bidang ilmu lainnya.')">Selengkapnya</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 3 -->
+      <div class="col">
+        <div class="card shadow-sm h-100">
+          <img src="images/mata pelajaran ugul/eng.jpg" class="card-img-top" alt="Kegiatan Sekolah">
+          <div class="card-body text-center d-flex flex-column">
+            <h5 class="card-title">Bahasa Inggris</h5>
+            <p class="card-text flex-grow-1">Berbagai kegiatan yang menunjang perkembangan karakter siswa.</p>
+            <button class="btn btn-primary mx-auto" data-bs-toggle="modal" data-bs-target="#infoModal"
+              onclick="updateModal('Learn English', 'Bahasa Inggris adalah mata pelajaran yang berfokus pada pengembangan keterampilan mendengar (listening), berbicara (speaking), membaca (reading), dan menulis (writing). Mata pelajaran ini bertujuan untuk membekali siswa dengan kemampuan berkomunikasi dalam bahasa Inggris, baik dalam konteks akademik maupun kehidupan sehari-hari.')">Selengkapnya</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="menu" class="container pt-4">
+    <div class="p-4">
+      <h2 class="p-4 fw-semibold">Ekstrakurikuler </h2>
+      <hr>
+      <div class="row row-cols-1 row-cols-md-3 g-4">
+        <!-- Card 1 -->
+        <div class="col">
+          <div class="card shadow-sm h-100">
+            <img src="images/persentasi/Futsal.jpg" class="card-img-top" alt="Mata Pelajaran">
+            <div class="card-body text-center d-flex flex-column">
+              <h5 class="card-title">Futsal</h5>
+              <p class="card-text flex-grow-1">Program pembelajaran unggulan untuk meningkatkan kualitas akademik siswa.
+              </p>
+              <button class="btn btn-primary mx-auto" data-bs-toggle="modal" data-bs-target="#infoModal"
+                onclick="updateModal('Futsal', 'Futsal adalah ekstrakurikuler olahraga yang mengajarkan teknik dasar bermain futsal, strategi permainan, serta kerja sama tim. Kegiatan ini bertujuan untuk meningkatkan keterampilan motorik, kebugaran fisik, sportivitas, dan disiplin siswa.')">Selengkapnya</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 2 -->
+        <div class="col">
+          <div class="card shadow-sm h-100">
+            <img src="images/persentasi/Pramuka.jpg" class="card-img-top" alt="Ekstrakurikuler">
+            <div class="card-body text-center d-flex flex-column">
+              <h5 class="card-title">Pramuka</h5>
+              <p class="card-text flex-grow-1">Kegiatan tambahan yang mendukung bakat dan minat siswa dalam berbagai
+                bidang.</p>
+              <button class="btn btn-primary mx-auto" data-bs-toggle="modal" data-bs-target="#infoModal"
+                onclick="updateModal('Pramuka', 'Pramuka adalah ekstrakurikuler yang bertujuan untuk membentuk karakter disiplin, mandiri, dan bertanggung jawab melalui berbagai kegiatan luar ruangan. Kegiatan ini melatih keterampilan kepemimpinan, kerja sama, serta cinta alam dan kebangsaan.')">Selengkapnya</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 3 -->
+        <div class="col">
+          <div class="card shadow-sm h-100">
+            <img src="images/persentasi/Tari.jpg" class="card-img-top" alt="Kegiatan Sekolah">
+            <div class="card-body text-center d-flex flex-column">
+              <h5 class="card-title">Tari</h5>
+              <p class="card-text flex-grow-1">Berbagai kegiatan yang menunjang perkembangan karakter siswa.</p>
+              <button class="btn btn-primary mx-auto" data-bs-toggle="modal" data-bs-target="#infoModal"
+                onclick="updateModal('Tari', 'Ekstrakurikuler Tari adalah kegiatan yang bertujuan untuk mengembangkan bakat seni tari, melatih kelenturan tubuh, serta menanamkan apresiasi terhadap budaya. Siswa akan belajar berbagai jenis tarian, baik tradisional maupun modern, serta teknik gerakan yang baik.')">Selengkapnya</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <script src="js/script.js"></script>
+
+  <footer class="bg-primary mt-5 py-4">
+    <div class="sosmed">
+      <a href="https://facebook.com" target="_blank" class="text-light"><i class="fab fa-facebook-f"></i></a>
+      <a href="https://instagram.com" target="_blank" class="text-light"><i class="fab fa-instagram"></i></a>
+      <a href="https://twitter.com" target="_blank" class="text-light"><i class="fab fa-twitter"></i></a>
+      <a href="https://wa.me/6281234567890" target="_blank" class="text-light"><i class="fab fa-whatsapp"></i></a>
+    </div>
+    <p class="footer text-center text-light mt-3">2025 &copy; All right reserved. Dikembangkan oleh |Kanius Wanimbo.
+    </p>
+  </footer>
+
+  <!-- Bootstrap JS (Pastikan sudah ada) -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+
+</body>
+
+</html>

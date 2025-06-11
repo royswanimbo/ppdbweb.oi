@@ -1,0 +1,60 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+.carousel-inner img {
+  width: 100%; /* Memastikan gambar memenuhi lebar carousel */
+  height: 700px; /* Menetapkan tinggi gambar agar seragam */
+  object-fit: cover; /* Memastikan gambar tetap proporsional dan tidak terdistorsi */
+}
+
+.carousel {
+  margin-top: 70px; /* Menyesuaikan jarak dari navbar */
+}
+
+.carousel-caption {
+  position: absolute; /* Menetapkan posisi absolut */
+  top: 50%; /* Menetapkan posisi atas */
+  transform: translateY(-50%); /* Menetapkan posisi vertikal */
+}
+
+/* Memberikan jarak atas dan bawah antar elemen */
+label,
+h3 {
+  display: block;
+  margin-bottom: 8px;
+}
+
+/* Menyesuaikan tampilan input dan select */
+input,
+select {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  margin-bottom: 15px; /* Jarak bawah antar input */
+}
+
+/* Menambah jarak atas pada form */
+.form-row {
+  display: flex;
+  gap: 30px;
+  margin-top: 20px;
+}
+
+/* Mengatur jarak pada tombol */
+.form-footer {
+  text-align: center;
+  margin-top: 30px;
+}
+
+/* Responsif untuk layar kecil */
+@media (max-width: 768px) {
+  .form-row {
+    flex-direction: column;
+  }
+}
+
+/* sosmet */
